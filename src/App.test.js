@@ -1,9 +1,8 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { shallow, mount, render } from 'enzyme';
 import App from "./App";
 
-test("renders header text", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/hello this is header/i);
-  expect(linkElement).toBeInTheDocument();
+test("renders correctly", () => {
+  const component = mount(<App />);
+  expect(component).toMatchSnapshot();
 });
