@@ -1,94 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<Article
+<Hero
   scrollPosition={0}
 >
   <div
-    className="section"
+    className="hero-container"
+    style={
+      Object {
+        "backgroundPositionY": "-0px",
+      }
+    }
   >
     <div
-      className="container"
+      className="hero-container-cover"
+      style={
+        Object {
+          "opacity": "1",
+        }
+      }
     >
       <div
-        className="article"
+        className="contents"
+        style={
+          Object {
+            "transform": "translate3d(0, 0px, 0)",
+          }
+        }
       >
         <div
-          className="row"
+          className="type"
         >
-          <p
-            className="text"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-             
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit ani.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cill nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <span
-              className="quote"
-            >
-              I am a strong meshing of 
-              <span
-                className="uppercase"
-              >
-                both
-              </span>
-               
-              worlds. When I moved to Africa as a girl, I thought I was
-               
-              <span
-                className="uppercase"
-              >
-                American
-              </span>
-              . Then when I came back, I realized how 
-              <span
-                className="uppercase"
-              >
-                African
-              </span>
-               
-              I was
-            </span>
-          </p>
-          <div
-            className="column-image"
-          >
-            <img
-              src="w950_column_image.jpg"
-            />
-            <p
-              className="caption"
-            >
-              <span
-                className="uppercase underline"
-              >
-                shop the look
-              </span>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit
-            </p>
-          </div>
+          cover story
         </div>
         <div
-          className="row"
+          className="title"
         >
-          <p
-            className="text full"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          standing strong
+        </div>
+        <div
+          className="author"
+        >
+          <i>
+            with
             <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <br />
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+            Danal Gurlen
+          </i>
         </div>
       </div>
     </div>
   </div>
-</Article>
+</Hero>
+`;
+
+exports[`the opacity of hero container cover should be 0 when scrollPosition equal to 1000 1`] = `"0"`;
+
+exports[`the opacity of hero container cover should disappear when scrollPosition equal to 300 1`] = `
+<div
+  className="hero-container"
+  style={
+    Object {
+      "backgroundPositionY": "-1px",
+    }
+  }
+>
+  <div
+    className="hero-container-cover"
+    style={
+      Object {
+        "opacity": "1",
+      }
+    }
+  >
+    <div
+      className="contents"
+      style={
+        Object {
+          "transform": "translate3d(0, 0px, 0)",
+        }
+      }
+    >
+      <div
+        className="type"
+      >
+        cover story
+      </div>
+      <div
+        className="title"
+      >
+        standing strong
+      </div>
+      <div
+        className="author"
+      >
+        <i>
+          with
+          <br />
+          Danal Gurlen
+        </i>
+      </div>
+    </div>
+  </div>
+</div>
 `;
