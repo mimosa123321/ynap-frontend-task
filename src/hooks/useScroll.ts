@@ -1,25 +1,25 @@
-import {useState, useEffect, useCallback, ReactNode} from 'react';
+import { useState, useEffect, useCallback } from "react";
 
 export const useScroll = () => {
-    const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-    const listener = useCallback(() => {
-        setScrollPosition(window.scrollY);
-    }, []);
+  const listener = useCallback(() => {
+    setScrollPosition(window.scrollY);
+  }, []);
 
-    const addScrollHandler = () => {
-        window.addEventListener('scroll', listener);
-    };
+  const addScrollHandler = () => {
+    window.addEventListener("scroll", listener);
+  };
 
-    const removeScrollHandler = () => {
-        window.removeEventListener('scroll', listener);
-    };
+  const removeScrollHandler = () => {
+    window.removeEventListener("scroll", listener);
+  };
 
-    useEffect(() => () => removeScrollHandler(), []);
+  useEffect(() => () => removeScrollHandler(), []);
 
-    return {
-        scrollPosition,
-        removeScrollHandler,
-        addScrollHandler,
-    };
+  return {
+    scrollPosition,
+    removeScrollHandler,
+    addScrollHandler,
+  };
 };
