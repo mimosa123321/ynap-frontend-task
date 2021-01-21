@@ -29,7 +29,7 @@ The build is minified and the filenames include the hashes.\
 ### Server side rendering
 
 1. You need to run `npm run build` first and the generated files will be served by server side.
-2. Then run `npm run dev` to bundle the server side js and open port 3006. It will take about 10 seconds. You can open http://localhost:3006 to view the site.
+2. Then run `npm run dev` to bundle the server side js and open port 3006. You can open http://localhost:3006 to view the site. You may see server error on the page because the bundling is not ready. It may take about 10 seconds. 
 
 
 ## Approaches
