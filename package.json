@@ -29,7 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "coverage": "npm test -- --coverage",
+    "coverage": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prettier": "./node_modules/.bin/prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "dev:build-server": "NODE_ENV=development webpack --config webpack.server.js --mode=development -w",
