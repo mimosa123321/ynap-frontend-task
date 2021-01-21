@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import columnImage from "../images/w950_column_image.jpg";
 import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
