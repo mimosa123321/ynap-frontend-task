@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     className="hero-container"
     style={
       Object {
-        "backgroundPositionY": "-0px",
+        "backgroundPositionY": "0px",
       }
     }
   >
@@ -51,55 +51,4 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
 </Hero>
-`;
-
-exports[`the opacity of hero container cover should be 0 when scrollPosition equal to 1000 1`] = `"0"`;
-
-exports[`the opacity of hero container cover should disappear when scrollPosition equal to 300 1`] = `
-<div
-  className="hero-container"
-  style={
-    Object {
-      "backgroundPositionY": "-1px",
-    }
-  }
->
-  <div
-    className="hero-container-cover"
-    style={
-      Object {
-        "opacity": "1",
-      }
-    }
-  >
-    <div
-      className="contents"
-      style={
-        Object {
-          "transform": "translate3d(0, 0px, 0)",
-        }
-      }
-    >
-      <div
-        className="type"
-      >
-        cover story
-      </div>
-      <div
-        className="title"
-      >
-        standing strong
-      </div>
-      <div
-        className="author"
-      >
-        <i>
-          with
-          <br />
-          Danal Gurlen
-        </i>
-      </div>
-    </div>
-  </div>
-</div>
 `;

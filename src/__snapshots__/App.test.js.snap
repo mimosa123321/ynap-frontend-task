@@ -8,7 +8,7 @@ exports[`renders correctly 1`] = `
     className="hero-container"
     style={
       Object {
-        "backgroundPositionY": "-0px",
+        "backgroundPositionY": "0px",
       }
     }
   >

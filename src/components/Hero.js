@@ -23,13 +23,13 @@ const Hero = (props) => {
     }
     setPositionY(posY > maxPosOffset ? maxPosOffset : posY);
     setOpacity(opacity < 0 ? 0 : opacity);
-    setBgPosY(isMobileView() ? 0 : posY);
+    setBgPosY(isMobileView() ? 0 : -posY);
   }, [scrollPosition]);
 
   return (
     <div
       className="hero-container"
-      style={{ backgroundPositionY: `-${bgPosY}px` }}
+      style={{ backgroundPositionY: `${bgPosY}px` }}
       ref={heroContainer}
     >
       <div className="hero-container-cover" style={{ opacity: `${opacity}` }}>
