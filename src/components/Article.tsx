@@ -1,34 +1,28 @@
-import { useScroll } from "../hooks/useScroll";
 import columnImage from "../images/w950_column_image.jpg";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 import { isMobileView } from "../utils/utils";
 
-const Article = () => {
-  const { scrollPosition, addScrollHandler } = useScroll();
+type ArticleProps = {
+  scrollPosition: number;
+};
+
+const Article = (props: ArticleProps) => {
+  const { scrollPosition } = props;
   const [sticky, setSticky] = useState(false);
   const columnImageEl = useRef<HTMLDivElement>(null);
   const textContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!isMobileView()) { addScrollHandler()};
-  }, []);
-
-  useEffect(() => {
-
     if (columnImageEl.current && textContainer.current) {
       if (scrollPosition > columnImageEl.current.offsetTop) {
         setSticky(true);
       }
-        console.log(scrollPosition);
-        console.log(textContainer.current.offsetTop);
-      if(scrollPosition > textContainer.current.offsetTop) {
-
+      if (scrollPosition > textContainer.current.offsetTop) {
         setSticky(false);
       }
     }
   }, [scrollPosition]);
-
 
   return (
     <div className="section">
@@ -78,14 +72,18 @@ const Article = () => {
                 I was
               </span>
             </p>
-            <div className={classNames("column-image", {sticky})} ref={columnImageEl}>
+            <div
+              className={classNames("column-image", { sticky })}
+              ref={columnImageEl}
+            >
               <img src={columnImage} />
               <p className="caption">
                 <span className="uppercase underline">shop the look</span> Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit
               </p>
             </div>
-
+          </div>
+          <div className="row">
             <p className="text full" ref={textContainer}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

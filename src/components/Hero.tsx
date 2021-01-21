@@ -1,23 +1,31 @@
-import { useEffect, useState } from "react";
-import { useScroll } from "../hooks/useScroll";
+import { useEffect, useState, useRef } from "react";
 import { isMobileView } from "../utils/utils";
 import "../styles/styles.scss";
 
-const Hero = () => {
-  const { scrollPosition, addScrollHandler } = useScroll();
+type HeroProps = {
+  scrollPosition: number;
+};
+
+const Hero = (props: HeroProps) => {
+  const { scrollPosition } = props;
   const [positionY, setPositionY] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const [bgPosY, setBgPosY] = useState(1);
+  const heroContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    addScrollHandler();
-  }, []);
-
-  useEffect(() => {
-    const posY = parseFloat((scrollPosition * 0.2).toString());
-    const opacity = parseFloat((1 / (scrollPosition * 0.02)).toString());
-    setPositionY(posY > 30 ? 30 : posY);
-    setOpacity(opacity > 1 ? 1 : opacity);
+    const speed = 0.2;
+    const maxPosOffset = 30;
+    const posY = parseFloat((scrollPosition * speed).toString());
+    let opacity = 1;
+    if (heroContainer.current) {
+      const diff = scrollPosition - heroContainer.current.offsetTop;
+      if (diff > 0) {
+        opacity = 1 - diff * (1 / (heroContainer.current.offsetHeight * speed));
+      }
+    }
+    setPositionY(posY > maxPosOffset ? maxPosOffset : posY);
+    setOpacity(opacity < 0 ? 0 : opacity);
     setBgPosY(isMobileView() ? 0 : posY);
   }, [scrollPosition]);
 
@@ -25,6 +33,7 @@ const Hero = () => {
     <div
       className="hero-container"
       style={{ backgroundPositionY: `-${bgPosY}px` }}
+      ref={heroContainer}
     >
       <div className="hero-container-cover" style={{ opacity: `${opacity}` }}>
         <div

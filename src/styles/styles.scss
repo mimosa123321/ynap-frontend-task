@@ -103,6 +103,14 @@ body {
 .article {
   font-size: 1.1rem;
 
+  .row {
+    &:after {
+      display: table;
+      clear: both;
+      content: "";
+    }
+  }
+
   .text {
     line-height: 1.4;
     @media screen and (min-width: 768px) {
