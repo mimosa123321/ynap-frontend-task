@@ -1,17 +1,13 @@
+import React from 'react';
 import columnImage from "../images/w950_column_image.jpg";
 import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
-import { isMobileView } from "../utils/utils";
 
-type ArticleProps = {
-  scrollPosition: number;
-};
-
-const Article = (props: ArticleProps) => {
+const Article = (props) => {
   const { scrollPosition } = props;
   const [sticky, setSticky] = useState(false);
-  const columnImageEl = useRef<HTMLDivElement>(null);
-  const textContainer = useRef<HTMLDivElement>(null);
+  const columnImageEl = useRef(null);
+  const textContainer = useRef(null);
 
   useEffect(() => {
     if (columnImageEl.current && textContainer.current) {
@@ -36,6 +32,9 @@ const Article = (props: ArticleProps) => {
               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.{" "}
               <br />
               <br />
@@ -49,7 +48,12 @@ const Article = (props: ArticleProps) => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea.
+              nisi ut aliquip ex ea enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit ani.
               <br />
               <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

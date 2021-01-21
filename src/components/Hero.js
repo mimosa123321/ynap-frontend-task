@@ -1,17 +1,14 @@
+import React from 'react';
 import { useEffect, useState, useRef } from "react";
 import { isMobileView } from "../utils/utils";
 import "../styles/styles.scss";
 
-type HeroProps = {
-  scrollPosition: number;
-};
-
-const Hero = (props: HeroProps) => {
+const Hero = (props) => {
   const { scrollPosition } = props;
   const [positionY, setPositionY] = useState(0);
   const [opacity, setOpacity] = useState(1);
   const [bgPosY, setBgPosY] = useState(1);
-  const heroContainer = useRef<HTMLDivElement>(null);
+  const heroContainer = useRef(null);
 
   useEffect(() => {
     const speed = 0.2;

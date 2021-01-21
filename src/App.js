@@ -1,3 +1,4 @@
+import React from 'react';
 import { useScroll } from "./hooks/useScroll";
 
 import Hero from "./components/Hero";
