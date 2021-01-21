@@ -21,10 +21,10 @@ test("the opacity of hero container cover should be 0 when scrollPosition is 100
 });
 
 test("the bg position of hero container should be 0px when mobile view is true", () => {
-  jest.mock('./../utils/utils', () => {
+  jest.mock("./../utils/utils", () => {
     return {
-      isMobileView: () => true
-    }
+      isMobileView: () => true,
+    };
   });
   const component = mount(<Hero scrollPosition={0} />);
   const child = component.find(".hero-container");
@@ -32,10 +32,10 @@ test("the bg position of hero container should be 0px when mobile view is true",
 });
 
 test("the bg position of hero container should be -600px when scroll position is 3000", () => {
-  jest.mock('./../utils/utils', () => {
+  jest.mock("./../utils/utils", () => {
     return {
-      isMobileView: () => false
-    }
+      isMobileView: () => false,
+    };
   });
   const component = mount(<Hero scrollPosition={3000} />);
   const child = component.find(".hero-container");
@@ -45,5 +45,7 @@ test("the bg position of hero container should be -600px when scroll position is
 test("the translate Y of hero contents should be -600px when scroll position is 3000", () => {
   const component = mount(<Hero scrollPosition={3000} />);
   const child = component.find(".contents");
-  expect(child.get(0).props.style.transform).toStrictEqual("translate3d(0, 30px, 0)");
+  expect(child.get(0).props.style.transform).toStrictEqual(
+    "translate3d(0, 30px, 0)"
+  );
 });
