@@ -80,7 +80,7 @@ const Article = (props) => {
               className={classNames("column-image", { sticky })}
               ref={columnImageEl}
             >
-              <img src={columnImage} />
+              <img alt="column-image" src={columnImage} />
               <p className="caption">
                 <span className="uppercase underline">shop the look</span> Lorem
                 ipsum dolor sit amet, consectetur adipiscing elit

@@ -15,7 +15,7 @@ export const useScroll = () => {
     window.removeEventListener("scroll", listener);
   };
 
-  useEffect(() => () => removeScrollHandler(), []);
+  useEffect(() => () => removeScrollHandler(), [removeScrollHandler]);
 
   return {
     scrollPosition,

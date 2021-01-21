@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     addScrollHandler();
-  }, []);
+  }, [addScrollHandler]);
   return (
     <div className="app">
       <Hero scrollPosition={scrollPosition} />

@@ -1,6 +1,6 @@
 ## Start the app
 
-Clone the project and run npm install.
+Clone the project and run npm install in the ynap-frontend-task directory 
 
 ## Available Scripts
 
@@ -28,8 +28,8 @@ The build is minified and the filenames include the hashes.\
 
 ### Server side rendering
 
-1. You need to run `npm run build` and the generated files will be served by server side.
-2. Then run `npm run dev` to bundle the server side js and open port 3006. You can open http://localhost:3006 to view the site.
+1. You need to run `npm run build` first and the generated files will be served by server side.
+2. Then run `npm run dev` to bundle the server side js and open port 3006. It will take about 10 seconds. You can open http://localhost:3006 to view the site.
 
 
 ## Approaches
